@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.nio.charset.StandardCharsets;
 
 
@@ -14,6 +16,16 @@ public class convert {
         String str = "";
 
         File file = new File(inFilePath);
+
+        if(!file.exists()){
+
+            System.out.println(inFilePath+"This File does not exist");
+
+            System.exit(0);
+
+
+
+        }
 
         Long length = file.length();
 
@@ -57,5 +69,17 @@ public class convert {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /*四舍五入保留两位小数*/
+    public static String process(double ans){
+
+
+        BigDecimal decimal = new BigDecimal(ans * 100);
+
+        String Ans =decimal.setScale(2, RoundingMode.HALF_UP).toPlainString();
+
+        return Ans;
+
     }
 }
