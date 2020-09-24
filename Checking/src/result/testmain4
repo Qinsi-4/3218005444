@@ -1,0 +1,4 @@
+origintextpath : src/test/test1/orig.txt
+copytextpath : src/test/test1/orig_0.8_dis_10.txt
+answertextpath : src/result/testmain4
+similarity : 80.25

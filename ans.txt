@@ -1,0 +1,4 @@
+origintextpath : C:\Users\玲玲\Desktop\软工作业\orig.txt
+copytextpath : C:\Users\玲玲\Desktop\软工作业\orig_0.8_add.txt
+answertextpath : C:\Users\玲玲\Desktop\软工作业\ans.txt
+similarity : 87.22

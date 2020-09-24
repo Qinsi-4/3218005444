@@ -4,17 +4,7 @@ import java.math.RoundingMode;
 public class Main {
     public static void main(String[] args){
 
-        String originString = convert.textToString(args[0]);
-
-        String copyString = convert.textToString(args[1]);
-
-        double ans =getCos.getCos(originString,copyString);
-
-        String ansString = process(ans);
-
-        convert.stringToText(args[2],"原文件地址 ："+args[0]+"\n"+"抄袭文件地址 ："+args[1]+"\n"+"答案地址 ："+args[2]+"\n"+"相似度 ："+ansString);
-
-        System.out.println("Similarity :"+ansString+"\n");
+       work(args[0],args[1],args[2]);
 
     }
 
@@ -28,5 +18,19 @@ public class Main {
 
         return Ans;
 
+    }
+
+    public static void work(String s1, String s2, String s3) {
+        String originString = convert.textToString(s1);
+
+        String copyString = convert.textToString(s2);
+
+        double ans =getCos.getCos(originString,copyString);
+
+        String ansString = process(ans);
+
+        convert.stringToText(s3,"origintextpath : "+s1+"\n"+"copytextpath : "+s2+"\n"+"answertextpath : "+s3+"\n"+"similarity : "+ansString);
+
+        System.out.println("Similarity :"+ansString+"\n");
     }
 }

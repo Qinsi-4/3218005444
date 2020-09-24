@@ -1,0 +1,4 @@
+origintextpath : src/test/test1/orig.txt
+copytextpath : src/test/test1/empty.txt
+answertextpath : src/result/shouldb0
+similarity : 0.00

@@ -10,9 +10,9 @@ import java.util.*;
 public class getCos {
     public static double getCos(String s1, String s2) {
 
-        Map<String, Vector<Integer>> Offset1= new TreeMap<>();//词出现的位置
+        Map<String, Vector<Integer>> Offset1= new TreeMap<String, Vector<Integer>>();//词出现的位置
 
-        Map<String,Vector<Integer> >Offset2= new TreeMap<>();//按键值排序
+        Map<String,Vector<Integer>>Offset2= new TreeMap<String, Vector<Integer>>();//按键值排序
 
         List<Term> termList = IndexTokenizer.segment(s1);//分词
 
@@ -36,7 +36,7 @@ public class getCos {
 
             if(Offset1.get(news)==null){
 
-                Vector<Integer>off= new Vector<>(100);
+                Vector<Integer>off= new Vector<Integer>(100);
 
                 off.add(pos);
 
